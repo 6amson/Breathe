@@ -172,7 +172,7 @@ background-color: var(--main-bg-color);
 
 .testSlider_pri > :last-child{
     height: 75%;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
