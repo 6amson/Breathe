@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Homepage from './components/homepage'
+import Homepage from './components/homepage';
+import Loginpage from "./components/loginpage";
 import Slider from "./components/Slider";
 
 function App() {
@@ -11,7 +12,10 @@ function App() {
           <Route exact path='/' element={< Homepage />}></Route>
         </Routes>
         <Routes>
-          <Route exact path='/home' element={< Slider />}></Route>
+          <Route path='/landing' element={< Slider />}></Route>
+        </Routes>
+        <Routes>
+          <Route path='/login' element={< Loginpage />}></Route>
         </Routes>
       </div>
     </Router>
