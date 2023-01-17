@@ -43,7 +43,7 @@ export default function Home() {
         setTimeout(() => {
             logoNameDiv.classList.toggle('displayNone')
             //secondDiv.style.display = 'block'
-            navigate('./landing')
+            navigate('./login')
         }, 3200)
 
     })

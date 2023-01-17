@@ -9,13 +9,13 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route exact path='/' element={< Homepage />}></Route>
+          <Route exact path='/' element={< Slider />}></Route>
         </Routes>
         <Routes>
-          <Route path='/landing' element={< Slider />}></Route>
+          <Route path='/landing' element={< Homepage />}></Route>
         </Routes>
         <Routes>
-          <Route path='/login' element={< Loginpage />}></Route>
+          <Route path='/landing/login' element={< Loginpage />}></Route>
         </Routes>
       </div>
     </Router>

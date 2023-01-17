@@ -5,9 +5,10 @@ import '../css/style.css'
 export default function Login () {
     return(
 
-        
-        <div className='container'>
 
+        <div className='loginContainer'>
+            <div className='loginFirstDiv'></div>
+            <div className='loginSecondDiv'></div>
         </div>
     )
 }

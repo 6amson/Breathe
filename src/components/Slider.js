@@ -47,7 +47,7 @@ export default function Slider() {
 
                     slides[current - 1].classList.remove('slidefinal');
                     slides[current - 1].classList.toggle('fade');
-                    navigate('./login');
+                    navigate('./landing');
                 }
             }, 2200);
 
