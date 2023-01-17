@@ -37,7 +37,7 @@ p{
 .logoNameDiv{
     width: 100vw;
     justify-content: center;
-    height: inherit;
+    height: 70%;
     display: grid;
     grid-template-rows: 0.7fr 2fr; 
     background-color: white;
