@@ -15,38 +15,41 @@ export default function Home() {
     const navigate = useNavigate();
 
 
-    // useEffect(() => {
-    //     const logoNameDiv = document.getElementsByClassName('logoNameDiv')[0];
-    //     const logoName1 = document.getElementsByClassName('logoName1')[0];
-    //     const secondDiv = document.getElementsByClassName('secondDiv');
+    useEffect(() => {
+        const logoNameDiv = document.getElementsByClassName('logoNameDiv')[0];
+        const logoName1 = document.getElementsByClassName('logoName1')[0];
+        const secondDiv = document.getElementsByClassName('secondDiv');
 
-    //     setSecondDiv(secondDiv);
-    //     setlogoName1(logoName1);
-    //     setMySlider('.myslider')
+        setSecondDiv(secondDiv);
+        setlogoName1(logoName1);
+        setMySlider('.myslider')
 
-    //     setTimeout(() => {
-    //         logoNameDiv.classList.toggle('fadeout')
-    //         secondDiv.style.display = 'none';
-    //         console.log(logoNameDiv)
-    //     }, 500)
+          logoNameDiv.classList.add('fade')
 
-    //     setTimeout(() => {
-    //         logoName1.classList.toggle('downlow')
-    //     }, 1000)
+        setTimeout(() => {
 
-    //     setTimeout(() => {
-    //         logoNameDiv.classList.remove('downlow')
-    //         logoNameDiv.classList.remove('fadeout')
+            logoNameDiv.classList.replace('fade', 'fadeout')
+            secondDiv.style.display = 'none';
+            console.log(logoNameDiv)
+        }, 500)
 
-    //     }, 3000)
+        setTimeout(() => {
+            logoName1.classList.toggle('downlow')
+        }, 1000)
 
-    //     setTimeout(() => {
-    //         logoNameDiv.classList.toggle('displayNone')
-    //         //secondDiv.style.display = 'block'
-    //         navigate('./login')
-    //     }, 3200)
+        setTimeout(() => {
+            logoNameDiv.classList.remove('downlow')
+            logoNameDiv.classList.remove('fadeout')
 
-    // })
+        }, 3000)
+
+        setTimeout(() => {
+            logoNameDiv.classList.toggle('displayNone')
+            //secondDiv.style.display = 'block'
+            navigate('./login')
+        }, 3200)
+
+    })
 
 
 
@@ -58,7 +61,7 @@ export default function Home() {
         <div className="container">
 
             <div className="firstDiv">
-                <div className=' fade_transition logoNameDiv'>
+                <div className='fade_transition logoNameDiv'>
                     <div className="logoName logoName1 toplevel_transition toplevel">
                         <p>Breathe.</p>
                     </div>
