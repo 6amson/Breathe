@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-bg-color: #f3f0e9;
+    --main-bg-pri-color: #27584e;
+    --main-color: #8679BC;
+    --main-color2: #fffcd1;
+    --main-header-font: 'Playfair Display', serif;
+    --main-body-font:'Alata', sans-serif;
+    --main-padding: 4em;
+}
+
+
+
+/*****************  H O M E P A G E *****************/
+
+p{
+    font-family: var(--main-header-font);
+    font-weight: 500;
+}
+
+.firstDiv{
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--main-bg-color);
+}
+
+.logoNameDiv{
+    width: 100vw;
+    justify-content: center;
+    height: inherit;
+    display: grid;
+    grid-template-rows: 0.7fr 2fr; 
+    background-color: white;
+}
+
+.logoName{
+    color: var(--main-bg-pri-color);
+    align-self: center;
+    justify-self: center;
+    font-size: 4em;
+    font-style: italic;
+    
+}
+
+.imageDiv{
+    background-color: var(--main-bg-color);
+    width: 100vw;
+    background-image: url('../img/peaceOffering.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+.toplevel{
+    position: relative;
+    top: -150px;
+}
+
+.toplevel_transition{
+    transition: top 500ms ease-out;
+}
+
+.downlow{
+    top: 0;
+}
+
+.fade{
+    opacity: 0;
+}
+
+.fade_transition{
+    transition: opacity 300ms ease-in-out;
+}
+
+.fadeout{
+    opacity: 1;
+}
+
+.displayNone{
+    display: none;
+}
+
+.displayFlex{
+    display: flex;
+}
+
+.displayBlock{
+    display: block;
+}
+
+.bodyBody{
+    overflow: hidden;
+
+    height: 100vh;
+    width: 100vw;  
+    
+}
+
+.testBody{
+
+height: 85%;
+width: 100%;
+position: relative;
+display: flex;
+justify-content: center;
+top: 6.5em;
+background-color: var(--main-bg-color);
+}
+
+.testSlider_main{
+    overflow: hidden;
+    height: 46em;
+    width: 70%;
+
+    position: absolute;
+    top: -7em;
+}
+
+.testSlider_pri{
+   animation-name: sliderOpacity;
+    animation-duration: 500ms;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    grid-template-rows: 1fr 0.5fr 2fr;
+
+   height: 100%;
+   left: 0;
+   position: relative;
+   overflow: hidden;
+}
+
+@keyframes sliderOpacity {
+    0%   {opacity: 0;}
+    25%  {opacity: 0.5;}
+    50% {opacity: 0.75;}
+    100%  {opacity: 1;}
+  }
+.testSlider_pri > div{
+    width: 100%;
+ 
+}
+
+.testSlider_pri > div:first-child{
+    height: 15%;
+    font-size: 4em;
+    color: var(--main-bg-pri-color);
+    font-style: italic;
+}
+
+.testSlider_pri > div:nth-child(2){
+    height: 10%;
+    font-family: var(--main-body-font);
+    font-size: 2em;
+}
+
+.testSlider_pri > :last-child{
+    height: 75%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sliderThirdDiv3{
+    background-image: url(../img/peopleHangingTalk.png);
+}
+
+.sliderThirdDiv2{
+    background-image: url(../img/personBusy.png);
+}
+
+.sliderThirdDiv1{
+    background-image: url(../img/peopleYoga.png);
+}
+
+.sliderThirdDiv4{
+    background-image: url(../img/peopleHangingOnline.png);
+}
+
+
+
+/* .testSlider_pri > p:first-child{
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    font-family: var(--main-header-font);
+    font-weight: 500;
+    color: #1e6455;
+
+    margin-bottom: 0.2em;
+    font-style: italic;
+
+}
+
+.testSlider_pri > img{
+    width: 40em;
+    height: 35em;
+  border: solid;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+    
+    margin-bottom: 0;
+    animation-name: sliderOpacity;
+    animation-duration: 500ms; 
+
+}
+*/
+.testSlider_pri > p:last-child{
+   
+}
+
+/* .testSlider_pri > div {
+    display: inline;
+    height: fit-content;
+    width: fit-content;
+padding: 10px;
+background-color: cyan;
+margin-top: 30px;
+} */
+
+
+
+.main{
+    display: block
+}
+
+.slidefinal{
+    left: 1650px;
+}
+
+
+.slideTrans{
+    transition: left 500ms ease-in;
+}
+
+.slideBefore{
+    left: 0;
+}
