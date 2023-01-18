@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+.linkup{
+    text-decoration: none;
+}
+
 :root{
     --main-bg-color: #f3f0e9;
     --main-bg-pri-color: #27584e;
@@ -193,8 +197,6 @@ background-color: var(--main-bg-color);
     background-image: url(../img/peopleHangingOnline.png);
 }
 
-
-
 .main{
     display: block
 }
@@ -217,8 +219,219 @@ background-color: var(--main-bg-color);
 
 
 
-/************************* L O G I N*****************************/
+/************************* S I G N - U P *****************************/
 
-.loginContainer{
+.signupContainer{
+
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 0.2fr 2fr;
+}
+
+.signupContain{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    margin-bottom: 1em;
+    box-shadow: 0.2px 2px rgb(194, 191, 192);
+}
+
+.navigation > div > p{
+    font-size: 1.5em;
+    font-family: var(--main-header-font);
+    font-style: italic;
+    color: var(--main-bg-pri-color);
+    padding-left: 1em;
+    cursor: pointer;
+
+}
+
+
+.signupSecondDiv{
+    background-color: white;
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 0.5fr 0.5fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    background-image: url('../img/personSignUp.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 2em;
+}
+
+
+.signupSecondDiv > p{
+font-size: 1.5em;
+font-family: var(--main-body-font);
+}
+
+/**!IMPORTANT INPUT**/
+.formDiv > input{
+    font-size: 1em;
+    margin: 0.5em 0;
+    padding: 1em;
+    width: 23em;
+    border: solid 0px;
+    border-radius: 0.5em;
+    font-family: var(--main-body-font);
+    background-color: var(--main-bg-color);
+}
+/****/
+
+.formDiv > input:focus{
+    border: #27584e solid 2px;
+}
+
+
+.formDiv > input:last-child{
+    background-color: var(--main-bg-pri-color);
+    color: white;
+    cursor: pointer;
+    padding: 0.7em;
+    letter-spacing: 0.05em;
+    margin-top: 3em;
+}
+
+
+.formDiv{
+    display: grid;
+    margin-top: -2em;
+}
+
+.signupGoogleLogo, .signupButLogin > p{
+    font-family: var(--main-body-font);
+}
+.signupGoogleLogo{
+    border-radius: 0.5em;
     border: solid ;
+    width: 20em;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    position: relative;
+    margin-top: 1em;
+    
+}
+
+.signupGoogleLogo > button > span{
+    color: white;
+    font-family: var(--main-body-font);
+
+}
+
+.signupGoogleLogo > button{
+    width: inherit;
+    height: inherit;
+    padding: 0.4em 0;
+    background-color: black;
+    cursor: pointer;
+    border: none;
+
+}
+
+.signupButLogin{
+    width: 12em;
+    display: flex;
+    justify-content: space-around;
+    margin-top: -2em;
+}
+
+.signupButLogin > p:first-child{
+    color: rgb(57, 57, 57);
+    
+}
+
+.linkuplogin{
+    color: var(--main-bg-pri-color);
+  
+  
+    cursor: pointer;
+}
+
+.googleImg{
+    width: 1.5em;
+    position: relative;
+    top: 0.4em;
+    margin-right: 0.7em;
+}
+
+
+.dividingBorder{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************ M E D I A   Q U E R I E S*******************************/
+
+@media screen and (max-width: 450px){
+    .signupSecondDiv > p{
+        margin-left: 1em;
+    }
+
+    .formDiv > input{
+        padding: 0.7em;
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+        width: 20em;
+    }
+
+    .signupSecondDiv{
+        display: grid;
+    grid-template-rows: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+    grid-template-columns: 1fr;
+    }
+
+    .dividingBorder{
+        display: block;
+        position: relative;
+        color: rgb(91, 89, 89);
+        width: 20em;
+        margin-top: -1em;
+    
+    }
+    
+    .dividingBorder >  span{
+        position: absolute;
+        font-family: var(--main-body-font);
+        padding: 0.2em;
+        background-color: white;
+        left: 9em;
+        bottom: -0.7em;
+    }
+
+    .formDiv{
+        display: grid;
+        margin-top: 0em;
+    }
 }

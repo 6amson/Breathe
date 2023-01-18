@@ -8,11 +8,22 @@ import google from '../img/google.png'
 
 
 
-export default function Login() {
+export default function Signup() {
 
+    const [fname, setfname] = useState('');
+    const [lname, setlname] = useState('');
     const [email, setemail] = useState('');
     const [password, setpassword] = useState('');
 
+
+
+    const handlechangefn = (e) => {
+        setfname(e.target.value);
+    }
+
+    const handlechangeln = (e) => {
+        setlname(e.target.value);
+    }
 
     const handlechangeemail = (e) => {
         setemail(e.target.value);
@@ -34,26 +45,26 @@ export default function Login() {
 
                     <img alt='person signing up' src={personsignup}></img>
                 </div> */}
-                <div className='signupSecondDiv loginSecondDiv'>
+                <div className='signupSecondDiv'>
                     <p className=''>Create an account to save your progress</p>
                     <form className='formDiv'>
+                        <input required='required' type='text' onChange={handlechangefn} placeholder='first name'></input>
+                        <input required='required' type='text' onChange={handlechangeln} placeholder='last name'></input>
                         <input required='required' type='email' onChange={handlechangeemail} placeholder='email'></input>
                         <input required='required' minLength='7' maxLength='20' type='password' onChange={handlechangepw} placeholder='password'></input>
-                        <input required='required' type='submit' value='Continue'></input>
-                    </form>
+                        <input required='required' type='submit'></input>
 
-                    <div className='dividingBorder'><span>or</span><hr></hr></div>
+                    </form>
                     <div className='signupGoogleLogo'>
                         <button>
                             <img className='googleImg' src={google} />
                             <span>Sign up with google</span>
                         </button>
                     </div>
-
                     <div className='signupButLogin'>
-                        <p>No account?</p>
-                        <Link to='/signup' className='linkup'>
-                            <p className='linkuplogin'>SIGN UP</p>
+                        <p>Have an account?</p>
+                        <Link to='/login' className='linkup'>
+                            <p className='linkuplogin'>LOG IN</p>
                         </Link>
                     </div>
                 </div>

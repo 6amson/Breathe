@@ -53,7 +53,7 @@ export default function Home() {
 
 useEffect(() => {
     setTimeout(() => {
-        navigate('./login')
+        window.location.href = '/signup'
     }, 2000);
 })
 
