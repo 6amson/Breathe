@@ -171,8 +171,8 @@ background-color: var(--main-bg-color);
 }
 
 .testSlider_pri > :last-child{
-    height: 75%;
-    background-size: cover;
+    height: 70%;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -194,9 +194,6 @@ background-color: var(--main-bg-color);
 }
 
 
-.testSlider_pri > p:last-child{
-   
-}
 
 .main{
     display: block

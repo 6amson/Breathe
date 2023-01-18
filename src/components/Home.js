@@ -51,7 +51,11 @@ export default function Home() {
 
     // })
 
-
+useEffect(() => {
+    setTimeout(() => {
+        navigate('./login')
+    }, 2000);
+})
 
 
 
