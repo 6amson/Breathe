@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../css/style.css'
 import './homepage'
-import Slider from './Slider'
+
 
 
 export default function Home() {

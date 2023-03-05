@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Homepage from './components/homepage';
 import Loginpage from "./components/Loginpage";
 import Signuppage from "./components/Signuppage";
+import Mainpage from "./components/Mainpage"
 import Slider from "./components/Slider";
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path='/login' element={< Loginpage />}></Route>
+        </Routes>
+        <Routes>
+          <Route path='/main' element={< Mainpage />}></Route>
         </Routes>
       </div>
     </Router>

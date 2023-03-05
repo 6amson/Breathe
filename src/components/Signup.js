@@ -15,6 +15,8 @@ export default function Signup() {
     const [email, setemail] = useState('');
     const [password, setpassword] = useState('');
 
+   const isSigned = true;
+
 
 
     const handlechangefn = (e) => {
@@ -46,17 +48,30 @@ export default function Signup() {
                     <img alt='person signing up' src={personsignup}></img>
                 </div> */}
                 <div className='signupSecondDiv'>
+                    
                     <p className=''>Create an account to save your progress</p>
                     <form className='formDiv'>
                         <input required='required' type='text' onChange={handlechangefn} placeholder='first name'></input>
                         <input required='required' type='text' onChange={handlechangeln} placeholder='last name'></input>
                         <input required='required' type='email' onChange={handlechangeemail} placeholder='email'></input>
                         <input required='required' minLength='7' maxLength='20' type='password' onChange={handlechangepw} placeholder='password'></input>
-                        <input required='required' type='submit'></input>
+                        {/* <input required='required' type='submit'></input> */}
+                        {
+                        isSigned ? (
+                            <Link to='/main' className='linkup'>
+                                <input className='linkupSubmit' required='required' type='submit'></input>
+                            </Link>
+                        ) : (
+                            <Link to='/signup' className='linkup'>
+                                <input required='required' type='submit'></input>
+                            </Link>
+                        )
+                    }
 
                     </form>
                     <div className='signupGoogleLogo'>
                         <button>
+                            
                             <img className='googleImg' src={google} />
                             <span>Sign up with google</span>
                         </button>
